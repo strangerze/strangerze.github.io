@@ -1,0 +1,60 @@
+<html>
+<style>
+
+.axis {
+  font: 10px sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.axis .domain {
+  fill: none;
+  stroke: #000;
+  stroke-opacity: .3;
+  stroke-width: 10px;
+  stroke-linecap: round;
+}
+
+.axis .halo {
+  fill: none;
+  stroke: #ddd;
+  stroke-width: 8px;
+  stroke-linecap: round;
+}
+
+.slider .handle circle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: .5;
+  stroke-width: 1.25px;
+  cursor: crosshair;
+}
+.slider .handle text {
+  fill: black;
+  text-align: center;
+  font-size: 10px;
+}
+</style>
+<head>
+    <title>Top 12 Crimes in San Francisco, 2014 </title>
+    <meta charset="utf-8" />
+    <link 
+        rel="stylesheet" 
+        href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
+    />
+</head>
+<body>
+	<p><font size=15>Top 12 Crimes in San Francisco, 2014</font></p>
+	<p><font size=5>--By Zezhen Qiu</font></p>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
+    <script
+       src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js">
+    </script>
+    
+    <script
+       src="http://leaflet.github.io/Leaflet.heat/dist/leaflet-heat.js">
+    </script>
+	<script src="script.js"></script>
+</body>
+</html>
