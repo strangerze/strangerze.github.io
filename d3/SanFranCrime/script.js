@@ -54,7 +54,7 @@ d3.csv("data.csv", function(data) {
 	
 	//slider
 	var scale_linear = d3.scale.linear()
-		.domain([0, 24*60])
+		.domain([0, 24*60-1])
 		.range([0, width])
 		.clamp(true);
 
