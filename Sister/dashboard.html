@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>成团冲浪榜</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="dashboard.css">
+</head>
+<body>
+    <div id="app" class="container">
+        <div>
+            <h1>乘风破浪的姐姐</h1>
+        </div>
+        <div><h2>成团冲浪榜</h2></div>
+        <div><h3>当前成团晋级</h3></div>
+        <div class="row">
+            <div class="col-sm-6" style="padding:0">
+                <div class="d-flex flex-row">
+                    <div class="p-2" v-for="member in final_result.final_team.slice(0,3)">
+                        <img class="img-thumbnail face-small" v-bind:src="'img/'+ member.name +'.jpg'"/>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6" style="padding:0">
+                <div class="d-flex flex-row">
+                    <div class="p-2" v-for="member in final_result.final_team.slice(3)">
+                        <img class="img-thumbnail face-small" v-bind:src="'img/'+ member.name +'.jpg'"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style="padding-top:2vw;">
+            <div class="col">
+                <h4>宁静团</h4>
+                <p>晋级名额：<span style="font-size:min(10vw,50px)">{{final_result.nj_pick}}</span></p>
+                <div v-for="member in final_result.nj_team_list">{{ member.name }}:{{member.votes}}</div>
+            </div>
+            <div class="col">
+                <h4>李斯丹妮团</h4>
+                <p>晋级名额：<span style="font-size:min(10vw,50px)">{{final_result.lsdn_pick}}</span></p>
+                <div v-for="member in final_result.lsdn_team_list">{{ member.name }}:{{member.votes}}</div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.15.2/axios.js"></script>
+    <script src="sisters.js"></script>
+    <script src="chengtuan.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
